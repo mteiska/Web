@@ -1,8 +1,7 @@
 var express = require('express');
 const app = express();
 app.use(express.json());
-const path = require('path')
-app.use('/static', express.static(path.join(__dirname, 'assets')))
+app.use('/public',express.static('assets'))
 
 var bodyParser = require('body-parser') 
 // Help from https://expressjs.com/en/starter/hello-world.html 
