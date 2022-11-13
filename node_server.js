@@ -1,6 +1,9 @@
 var express = require('express');
 const app = express();
 app.use(express.json());
+const path = require('path')
+app.use('/static', express.static(path.join(__dirname, 'assets')))
+
 var bodyParser = require('body-parser') 
 // Help from https://expressjs.com/en/starter/hello-world.html 
 var jsonParser = bodyParser.json()
@@ -30,7 +33,7 @@ app.get('/hello', (req, res) => {
             sum: count
        })
          
-app.use(express.static('assets'))
+
         
     
     
