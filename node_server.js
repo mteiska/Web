@@ -30,7 +30,7 @@ app.get('/hello', (req, res) => {
             sum: count
        })
          
-        
+app.use(express.static('assets'))
         
     
     
